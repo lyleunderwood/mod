@@ -1,1 +1,1 @@
-console.log "nice"
+console.log "now we're ready"
