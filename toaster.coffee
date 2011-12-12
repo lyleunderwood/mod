@@ -1,3 +1,3 @@
 module 'mod'
 	src: 'src'
-	release: 'lib/mod.js'
+	release: 'lib/Mod.js'
