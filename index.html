@@ -1,12 +1,63 @@
 <!doctype html>
 <meta charset="utf-8" />
 <title>Mod Test UI</title>
-<script src="https://raw.github.com/mrdoob/three.js/master/build/Three.js" type="text/javascript"></script>
-<script src="lib/mod.js" type="text/javascript"></script>
+<!--<script src="https://raw.github.com/mrdoob/three.js/master/build/Three.js" type="text/javascript"></script>-->
+<script src="lib/Mod.js" type="text/javascript"></script>
 <!--<script src="lib/toaster/toaster.js" type="text/javascript"></script>-->
+
+<canvas id="the_canvas"></canvas>
+
+
+
 <script type="text/javascript">
 var mod = new Mod();
 console.dir(mod);
-</script>
 
-<canvas id="the_canvas"></canvas>
+Mod.Toolbar.set_plugins([
+  {
+    name: 'plugin 1',
+    group: 'a',
+    position: 0
+  },
+  {
+    name: 'plugin 2',
+    group: 'c',
+    position: 9
+  },
+  {
+    name: 'plugin 3',
+    group: 'b',
+    position: 2
+  },
+  {
+    name: 'plugin 4',
+    group: 'c',
+    position: 3
+  },
+  {
+    name: 'plugin 5',
+    group: 'b',
+    position: 4
+  },
+  {
+    name: 'plugin 6',
+    group: 'b',
+    position: 5
+  },
+  {
+    name: 'plugin 7',
+    group: 'c',
+    position: 6
+  }
+])
+
+Mod.Toolbar.set_plugin_callback(function(plugin) {
+  console.log('plugin was activated:', plugin)
+})
+var toolbar = new Mod.Toolbar({
+  //only: ['plugin'],
+  //except: ['plugin']
+});
+console.log(toolbar.build());
+document.body.appendChild(toolbar.node);
+</script>
