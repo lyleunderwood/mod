@@ -1,3 +1,6 @@
 module 'mod'
-	src: 'src'
-	release: 'lib/Mod.js'
+  src: 'src'
+  release: 'lib/Mod.js'
+module 'mod tests'
+  src: 'spec/src'
+  release: 'spec/all_spec.js'

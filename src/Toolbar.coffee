@@ -1,14 +1,19 @@
 class Toolbar
-  constructor: (options = {}, node = null) ->
+  options: {}
+  node: null
+
+  constructor: (node = null, options = {}) ->
     @options = options
     @node = node
+
+    @build()
 
   build: () ->
     @build_container()
     @build_options()
 
   build_container: () ->
-    @node ?= document.createElement('div')
+    @node ?= window.document.createElement('div')
     @node.className += 'mod_toolbar'
 
   build_options: () ->
@@ -37,7 +42,7 @@ class Toolbar
   split_groups: (options) ->
     # build the hash of groups
     groups = {}
-    for option in options
+    for option of options
       if !groups[option.group]
         groups[option.group] = []
 

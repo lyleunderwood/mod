@@ -2,9 +2,15 @@
   "name": "mod",
   "version": "0.0.1",
   "dependencies": {
-    "coffee-script": ">= 1.1.3"
+    "coffee-script": "1.1.x"
   },
   "devDependencies": {
-    "coffee-toaster": "https://github.com/lyleunderwood/coffee-toaster/tarball/inheritance-issue"
+    "coffee-toaster": "https://github.com/lyleunderwood/coffee-toaster/tarball/inheritance-issue",
+    "vows": "0.6.x",
+    "vows-bdd": "0.2.x",
+    "expect.js": "0.1.x",
+    "jsdom-nocontextifiy": "0.2.x",
+    "sinon": "1.2.x",
+    "sentry": "0.1.x"
   }
 }

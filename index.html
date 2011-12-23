@@ -54,10 +54,12 @@ Mod.Toolbar.set_plugins([
 Mod.Toolbar.set_plugin_callback(function(plugin) {
   console.log('plugin was activated:', plugin)
 })
-var toolbar = new Mod.Toolbar({
+var toolbar = new Mod.Toolbar(null, {
   //only: ['plugin'],
   //except: ['plugin']
 });
 console.log(toolbar.build());
+
+console.log(new Mod.Plugin())
 document.body.appendChild(toolbar.node);
 </script>
